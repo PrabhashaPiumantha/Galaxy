@@ -18,7 +18,7 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-Hello there, I'm [Hexzy Pro](https://telegra.ph/file/23c40c8b88da2370e9743.jpg)
+Hello there, I'm Bot :) Working At @GalaxyLanka :)
 I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot and I will help in managing your group
 ✪ If You Have Any Question Use /help Command xD ✪ 
 """
