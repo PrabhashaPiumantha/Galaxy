@@ -279,7 +279,7 @@ doin?
  - /stop <filter keyword>: stop that filter.
 """
 
-__mod_name__ = "Filters"
+__mod_name__ = "Filters 🍮"
 
 FILTER_HANDLER = CommandHandler("filter", filters)
 STOP_HANDLER = CommandHandler("stop", stop_filter)
