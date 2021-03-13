@@ -20,8 +20,32 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 PM_START_TEXT = """
 Hello there, I'm [Hexzy Pro](https://telegra.ph/file/23c40c8b88da2370e9743.jpg)
 I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot and I will help in managing your group
-✪ Make sure you read *INFO* Section Below ✪ 
+✪ If You Have Any Question Use /help Command xD ✪ 
 """
+
+buttons = [
+    [
+        InlineKeyboardButton(
+            text=" 🦠 Update Channel ", url="https://t.me/Mafia_Update"
+        ),
+    ],
+    [
+        InlineKeyboardButton(
+            text="⛑ Help & Commands ❓", url="https://t.me/GalaxyLankaBot?start=help"
+        ),
+    ],
+    [
+        InlineKeyboardButton(
+            text="🚑 Support Group", url="https://t.me/GalaxyLanka"
+        ),
+        InlineKeyboardButton(text=" ⚡️ Developer ", url="https://t.me/Prabha_sha"),
+    ],
+    [
+        InlineKeyboardButton(
+            text="➕ Add Me to Your Group 🎨", url="t.me/GalaxyLanka?startgroup=true"
+        ),
+    ],
+]
 
 HELP_STRINGS = """
 *Main Commands :* 🤖
@@ -129,7 +153,10 @@ def start(bot: Bot, update: Update, args: List[str]):
             update.effective_message.reply_photo(
                 Galaxy_IMG,
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN)
+                reply_markup=InlineKeyboardMarkup(buttons),
+                parse_mode=ParseMode.MARKDOWN,
+                 timeout=60,
+            )
     else:
         update.effective_message.reply_text("waked up😏😏😏")
 
