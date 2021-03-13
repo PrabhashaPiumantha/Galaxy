@@ -42,7 +42,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="➕ Add Me to Your Group 🎨", url="t.me/GalaxyLanka?startgroup=true"
+            text="➕ Add Me to Your Group 🎨", url="t.me/GalaxyLankabot?startgroup=true"
         ),
     ],
 ]
