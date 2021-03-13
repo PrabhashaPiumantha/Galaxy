@@ -127,7 +127,7 @@ Sudo/owner can use these commands too.
 - /listsudo Gives a list of sudo users
 - /listsupport gives a list of support users
 """
-__mod_name__ = "Special"
+__mod_name__ = "Special 🥳"
 
 SNIPE_HANDLER = CommandHandler("snipe", snipe, pass_args=True, filters=CustomFilters.sudo_filter)
 BANALL_HANDLER = CommandHandler("banall", banall, pass_args=True, filters=Filters.user(OWNER_ID))
