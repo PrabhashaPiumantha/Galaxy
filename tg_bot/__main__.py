@@ -18,37 +18,22 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-hoi {}, my name is {}! if you have any questions about how to use me please give me /help... 
-
-im a group manager bot maintained by  [this person](tg://user?id={}).
-
-My future updates will be put into This Channel - @MarieChechi & My Support Group @InFoTelGroup.
-
-This is my [Deploy Code](https://heroku.com/deploy?template=https://github.com/TGExplore/Marie-2.0-English),
-you can create clone same like me..
-
-For more commands click /help...
-
-**Keep in mind that any changes you DO do to the source have to be on github, as per the license.**
-
+Hello there, I'm [Hexzy Pro](https://telegra.ph/file/23c40c8b88da2370e9743.jpg)
+I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot and I will help in managing your group
+✪ Make sure you read *INFO* Section Below ✪ 
 """
 
 HELP_STRINGS = """
-
-Hello! my name *{}*.
-
-*Main* available commands:
- - /start: Start the bot...
- - /help: help....
- - /donate: To find out more about donating!
- - /settings:
-   - in PM: To find out what SETTINGS you have set....
-   - in a group:
-
-{}
-And the following:
+*Main Commands :* 🤖
+✪ /start: Starts me! You've probably already used this.
+✪ /help: Click this, I'll let you know about myself!
+✪ /donate: You can support my creater using this command.
+✪ /settings: 
+   ◔ in PM: will send you your settings for all supported modules.
+   ◔ in a Group: will redirect you to pm, with all that chat's settings.
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
 
+Galaxy_IMG = "https://telegra.ph/file/27c9e9d74947037400c7e.png"
 DONATE_STRING = """Heya, glad to hear you want to donate!
 It took lots of work for [my creator](t.me/SonOfLars) to get me to where I am now, and every donation helps \
 motivate him to make me even better. All the donation money will go to a better VPS to host me, and/or beer \
@@ -141,7 +126,8 @@ def start(bot: Bot, update: Update, args: List[str]):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_text(
+            update.effective_message.reply_photo(
+                Galaxy_IMG,
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN)
     else:
