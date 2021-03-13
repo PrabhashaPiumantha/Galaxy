@@ -268,7 +268,7 @@ __help__ = """
  Lyrics Plugin will take some moar time to come up.
 """
 
-__mod_name__ = "Extras"
+__mod_name__ = "Extras 🚠"
 
 ROLL_HANDLER = DisableAbleCommandHandler("roll", roll)
 TOSS_HANDLER = DisableAbleCommandHandler("toss", toss)
